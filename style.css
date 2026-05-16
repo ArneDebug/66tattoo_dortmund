@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 html {
@@ -228,7 +234,9 @@ h2 {
 }
 
 .portfolio-grid {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-top: 50px;
 }
 
@@ -273,7 +281,6 @@ h2 {
   .hero-grid,
   .about-grid,
   .process-grid,
-  .portfolio-grid,
   .features {
     grid-template-columns: 1fr;
   }
@@ -289,4 +296,22 @@ h2 {
   .hero-image {
     height: 400px;
   }
+
+  .buttons {
+  width: 100%;
+}
+
+.primary-btn,
+.secondary-btn {
+  width: 100%;
+}
+
+}
+
+@media(max-width: 900px) {
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
